@@ -4,7 +4,6 @@ import { api } from "@/convex/_generated/api"
 import { Id } from "@/convex/_generated/dataModel";
 import { Preloaded, usePreloadedQuery } from "convex/react"
 import { useEffect, useRef } from "react"
-import Image from "next/image"
 
 interface Message {
   content: string;
@@ -63,7 +62,7 @@ export default function ChatList({
                 {message?.type === "image" ? (
                   <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                     <div className="w-full">
-                      <Image
+                      <img
                         src={message.mediaUrl || ""}
                         alt="Message content"
                         className="w-full h-auto max-h-[300px] object-contain rounded-lg"

@@ -6,7 +6,6 @@ import { Id } from "@/convex/_generated/dataModel";
 import { fetchMutation } from "convex/nextjs";
 import { useMutation } from "convex/react";
 import { Mic, Paperclip, Send, X } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -268,7 +267,7 @@ export default function FormChat({
         <div className="p-2 flex gap-2 flex-wrap border-b border-border dark:border-[#313D45]">
           {attachments.map((url, index) => (
             <div key={index} className="relative group">
-              <Image
+              <img
                 src={url}
                 alt="attachment"
                 className="h-20 w-20 object-cover rounded-md"
